@@ -1,0 +1,132 @@
+{
+  "contract_fingerprint": "2289bcb0d661bdea6dd47c7967f37aace7d3a152e18e7d2f64c08514fb73e795",
+  "sdk_targets_version": "1.1.0",
+  "targets": [
+    {
+      "identity": {
+        "coordinates": "github.com/omniwrap/omniwrap-sdk@v1.0.0",
+        "ecosystem": "Go modules",
+        "entry": "omniwrap.NewClient",
+        "import": "import \"github.com/omniwrap/omniwrap-sdk\""
+      },
+      "operations": {
+        "cancelPreview": {
+          "member": "Previews.Cancel",
+          "method": "POST",
+          "path": "/v1/projects/{projectId}/previews/{previewId}/cancel",
+          "resource": "Previews",
+          "signature": "func (service *PreviewsService) Cancel(ctx context.Context, params PreviewsCancelParams, opts ...option.RequestOption) (*Response[*CancellationReceipt], error)"
+        },
+        "createConfigurationRevision": {
+          "member": "Configurations.NewRevision",
+          "method": "POST",
+          "path": "/v1/projects/{projectId}/configuration-revisions",
+          "resource": "Configurations",
+          "signature": "func (service *ConfigurationsService) NewRevision(ctx context.Context, params ConfigurationsNewRevisionParams, opts ...option.RequestOption) (*Response[*ConfigurationRevision], error)"
+        },
+        "createPreview": {
+          "member": "Previews.New",
+          "method": "POST",
+          "path": "/v1/projects/{projectId}/previews",
+          "resource": "Previews",
+          "signature": "func (service *PreviewsService) New(ctx context.Context, params PreviewsNewParams, opts ...option.RequestOption) (*Response[*Preview], error)"
+        },
+        "createSourceRevision": {
+          "member": "Sources.NewRevision",
+          "method": "POST",
+          "path": "/v1/projects/{projectId}/source-revisions",
+          "resource": "Sources",
+          "signature": "func (service *SourcesService) NewRevision(ctx context.Context, params SourcesNewRevisionParams, opts ...option.RequestOption) (*Response[*SourceRevision], error)"
+        },
+        "getArtifact": {
+          "member": "Artifacts.Get",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/artifacts/{artifactId}",
+          "resource": "Artifacts",
+          "signature": "func (service *ArtifactsService) Get(ctx context.Context, params ArtifactsGetParams, opts ...option.RequestOption) (*Response[*Artifact], error)"
+        },
+        "getConfigurationRevision": {
+          "member": "Configurations.GetRevision",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/configuration-revisions/{revisionId}",
+          "resource": "Configurations",
+          "signature": "func (service *ConfigurationsService) GetRevision(ctx context.Context, params ConfigurationsGetRevisionParams, opts ...option.RequestOption) (*Response[*ConfigurationRevision], error)"
+        },
+        "getEvidence": {
+          "member": "Evidence.Get",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/evidence/{evidenceId}",
+          "resource": "Evidence",
+          "signature": "func (service *EvidenceService) Get(ctx context.Context, params EvidenceGetParams, opts ...option.RequestOption) (*Response[*Evidence], error)"
+        },
+        "getPreview": {
+          "member": "Previews.Get",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/previews/{previewId}",
+          "resource": "Previews",
+          "signature": "func (service *PreviewsService) Get(ctx context.Context, params PreviewsGetParams, opts ...option.RequestOption) (*Response[*Preview], error)"
+        },
+        "getPreviewEvents": {
+          "member": "Previews.GetEvents",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/previews/{previewId}/events",
+          "resource": "Previews",
+          "signature": "func (service *PreviewsService) GetEvents(ctx context.Context, params PreviewsGetEventsParams, opts ...option.RequestOption) (*Response[*EventPage], error)"
+        },
+        "getPreviewLogs": {
+          "member": "Previews.GetLogs",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/previews/{previewId}/logs",
+          "resource": "Previews",
+          "signature": "func (service *PreviewsService) GetLogs(ctx context.Context, params PreviewsGetLogsParams, opts ...option.RequestOption) (*Response[*LogPage], error)"
+        },
+        "getProject": {
+          "member": "Projects.Get",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}",
+          "resource": "Projects",
+          "signature": "func (service *ProjectsService) Get(ctx context.Context, params ProjectsGetParams, opts ...option.RequestOption) (*Response[*Project], error)"
+        },
+        "getSourceRevision": {
+          "member": "Sources.GetRevision",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/source-revisions/{revisionId}",
+          "resource": "Sources",
+          "signature": "func (service *SourcesService) GetRevision(ctx context.Context, params SourcesGetRevisionParams, opts ...option.RequestOption) (*Response[*SourceRevision], error)"
+        },
+        "getUserContext": {
+          "member": "Context.GetUser",
+          "method": "GET",
+          "path": "/v1/me/context",
+          "resource": "Context",
+          "signature": "func (service *ContextService) GetUser(ctx context.Context, params ContextGetUserParams, opts ...option.RequestOption) (*Response[*UserContext], error)"
+        },
+        "listPreviewEvidence": {
+          "member": "Evidence.ListPreview",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/previews/{previewId}/evidence",
+          "resource": "Evidence",
+          "signature": "func (service *EvidenceService) ListPreview(ctx context.Context, params EvidenceListPreviewParams, opts ...option.RequestOption) (*Response[*EvidencePage], error)"
+        },
+        "listPreviews": {
+          "member": "Previews.List",
+          "method": "GET",
+          "path": "/v1/projects/{projectId}/previews",
+          "resource": "Previews",
+          "signature": "func (service *PreviewsService) List(ctx context.Context, params PreviewsListParams, opts ...option.RequestOption) (*Response[*PreviewPage], error)"
+        },
+        "listProjects": {
+          "member": "Projects.List",
+          "method": "GET",
+          "path": "/v1/projects",
+          "resource": "Projects",
+          "signature": "func (service *ProjectsService) List(ctx context.Context, params ProjectsListParams, opts ...option.RequestOption) (*Response[*ProjectPage], error)"
+        }
+      },
+      "package_directory": "../omniwrap-sdk",
+      "package_manifest": "go.mod",
+      "reference": "api.md",
+      "renderer": "go"
+    }
+  ]
+}
